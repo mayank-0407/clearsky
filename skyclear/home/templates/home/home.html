@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyClear</title>
+    <link rel="icon" href="./13d.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .card {
+        margin: 10% auto;
+        float: none; 
+        margin-bottom: 10px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">SkyClear</a>
+          <form class="d-flex">
+            <input class="form-control me-2" name="entered_city" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>    
+      <div class="card mb-3 " style="max-width: 440px;">
+        <div class="row g-0">
+          <div class="col-md-4 mx-auto" style = "{backgroundImage : http://openweathermap.org/img/wn/{{data.icon}}.png}">
+            <img src="http://openweathermap.org/img/wn/{{data.icon}}.png" class="img-fluid rounded-start" alt={{data.city}}>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{data.city}}  -  {{data.description}}</h5>
+              <p class="card-text">Temperature(°C): {{data.celcius_temperature}}°C</p>
+              <p class="card-text">Temperature(K): {{data.kelvin_temperature}} K</p>
+              <p class="card-text"><small class="text-muted">Humidity: {{data.humidity}} - Pressure:{{data.pressure}} Pa </small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
