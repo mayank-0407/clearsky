@@ -1,3 +1,4 @@
+[![clearsky Workflow](https://github.com/mayank-0407/clearsky/actions/workflows/django.yml/badge.svg)](https://github.com/mayank-0407/clearsky/actions/workflows/django.yml)
 # Project Creating A Weather App
 In this project a basic front end was created and openweather API was used.
 link: https://openweathermap.org/
